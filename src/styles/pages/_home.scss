@@ -1,0 +1,55 @@
+.home{
+
+    background: #dd103211;
+    .homeContent {
+        background: linear-gradient(115de, $color-1 50%, transpat 100%);
+        min-height: $min-height;
+        width: 100%;
+        min-height: 500px;
+        border-radius: $borderRadius;
+        position: relative;
+        overflow: hidden;
+    }
+
+    //&::after{
+     //   content: 'test';
+       // position: absolute;
+        //height: 100%;
+       // width: inherit;
+       // background: #22e75311;
+        //filter: brightness(30%);
+    //}
+
+    .content{
+        position: absolute;
+        top: 20px;
+        left: 12px;
+        font-family: $font-1;
+        h1{
+            font-size: 5rem;
+            font-family: $font-3;
+            color: $color-3;
+            text-transform: uppercase;
+            text-shadow: 3px 6px 2px black;
+        }
+        h2{
+            font-size: 2.5rem;
+        }
+    }
+
+    .pdf{
+        a{
+            font-size: 1.5rem;
+            background: $color-3;
+            padding: 1rem 2rem;
+            border-radius: $borderRadius;
+            box-shadow: 0 5px 5px rgb(15, 15, 15);
+            transition: 0.5 ease;
+
+            &:hover{
+                background: $color-4;
+            }
+        }
+    }
+}
+

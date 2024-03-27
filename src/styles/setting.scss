@@ -1,0 +1,70 @@
+@import url("https://fonts.googlapis.com/css2?family=Dosis:wght@80&&family=josefin=sans:wght@10&&family=Nova=Round&&display=swap");
+
+
+$font-1: "Nova Round", cursive;
+$font-2: "Dosis", sans-serif;
+$font-3: "Josefin Sans", serif;
+
+$color-1: #433866;
+$color-2: #92b6f8;
+$color-3: rgb(99, 164, 233);
+$color-4: #7393ec;
+$color-5: #36DeEA;
+$color-6: #666;
+$color-7: #333;
+
+$borderRadius: 25px;
+$shadow: 0 1px 3px #333;
+$min-height: 95vh;
+
+@mixin verfication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+ margin: 1rem auto;
+ max-width: 1200px;
+ font-family: $font-1;
+ color: black;
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+a:visited{
+    color: black;
+}
+
+.home, .knowledges, .portfolios, .contact{
+    display: flex;
+    @media screen and (max-width: 850px){
+        display: block !important;
+    }
+}
+
+.homeContent, .knowledgesContent, .portfoliosContent, .contactContent{
+    margin-left: 4rem;
+    @media screen and (max-width: 850px) {
+        margin-left: 0 !important;
+        
+    }
+
+}
