@@ -8,8 +8,14 @@ import { Preview, print } from 'react-html2pdf';
 function App() {
   const handleGenerateCv = () => {
     let cvTemplate = document.getElementById("cv-print")
-    cvTemplate.setAttribute("style", "width:250mm !important");
+    cvTemplate.setAttribute("style", "width:210mm !important")
     cvTemplate.classList.add("cv-print")
+    document.body.classList.remove("dark")
+    setTimeout(()=> {
+      print("cv", "cv-print")
+      cvTemplate.setAttribute("style", "width:100% !important")
+      cvTemplate.classList.remove("cv-print")
+    }, 300)
   }
   return  (
     <Preview id={'cv-print'}>
@@ -18,7 +24,7 @@ function App() {
         <div className='sidebar'>
         <div className='action'>
         <DarkMode/>
-        <button onClick={() => print("a", "cv-print" )}>print</button>
+        <button onClick={handleGenerateCv}><i className="fas fa-file-pdf"></i>PDF</button>
         </div>
           <User/>
           <Skills/>

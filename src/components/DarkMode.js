@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react"
+//import { useState } from "react"
 
 function DarkMode() {
     let clickedClass = "clicked"
@@ -7,6 +7,18 @@ function DarkMode() {
     const lightThem = "light"
     const darkThem = "dark"
     let theme
+
+    if(localStorage) {
+        theme = localStorage.getItem("theme")
+        console.log(theme)
+    }
+
+    if(theme === lightThem || theme === darkThem) {
+     body.classList.add(theme)
+
+    }else{
+        body.classList.add(lightThem)
+    }   
     
     const swithTheme = e => {
        if (theme === darkThem) {
@@ -23,10 +35,10 @@ function DarkMode() {
        }
     }
     return <button
-     className={theme == "dark" ?  clickedClass : ""}id="darkMode" 
+     className={theme === "dark" ?  clickedClass : ""}id="darkMode" 
      onClick={e => swithTheme(e)}
      > 
-    test
+   <i className="fas fa-moon"></i> Mode
     </button> 
 }
 

@@ -13,6 +13,7 @@ function User() {
             <p className="user__info"><i className="fas fa-user"></i> celibataire, Malagasy</p>
             <p className="user__info"><i className="fas fa-map-marker"></i>06 août 2003 à Belo/tsiribihina</p>
             <p className="user__info"><i className="fas fa-envelope"></i>fiarovavidiniainajosephine@gmail.com</p>
+            <p className="user__info"><i className="fas fa-cat"></i>FIAROVA</p>
         </div>
 
         </div>
